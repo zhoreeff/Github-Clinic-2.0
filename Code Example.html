@@ -6,6 +6,10 @@ h1 {
     color:darkgreen;
 }
 
+#matric_no{
+    display: none;
+}
+
 
 </style>
 
@@ -14,9 +18,10 @@ h1 {
 <!-- Write your name here -->
 <p>
     <b>NAME:</b> SYAHMIRUL AFIQ
+    <p id="matric_no"><b>Matric No:</b> B032310287</p>
 </p>
 
-<button id="btn">Click me</button>
+<button id="btn">Display Matric No</button>
 
 <br>
 
@@ -26,6 +31,17 @@ h1 {
 </html>
 
 <script>
-    var btn = document.getElementById("btn");
-    btn.addEventListener("click")
+    let btn = document.getElementById("btn");
+    let matric_no = document.getElementById("matric_no");
+    let clicked = false;
+    btn.onclick = function(){
+        if (clicked == false){
+            matric_no.style.display = "block";
+            clicked = true;
+        } else {
+            matric_no.style.display = "none";
+            clicked = false;
+        }
+        
+    }
 </script>
