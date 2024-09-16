@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html>
 <body>
+<style>
+h1 {
+    color:darkgreen;
+}
+
+#matric_no{
+    display: none;
+}
+
+
+</style>
 
 <h1>I HAVE SUCCESSFULLY FORKED AND CLONE THIS REPOSITORY</h1>
 
 <!-- Write your name here -->
+<p>
+    <b>NAME:</b> SYAHMIRUL AFIQ
+    <p id="matric_no"><b>Matric No:</b> B032310287</p>
+</p>
 
 NAME:ELLYSSA
 MATRIC:B032210277
@@ -14,10 +29,27 @@ NAME:NAJU
 MATRIC:B032210411
 
 
+<button id="btn">Display Matric No</button>
 
+<br>
 
-
-<br><img src="img.png">
+<img src="img.png">
 
 </body>
 </html>
+
+<script>
+    let btn = document.getElementById("btn");
+    let matric_no = document.getElementById("matric_no");
+    let clicked = false;
+    btn.onclick = function(){
+        if (clicked == false){
+            matric_no.style.display = "block";
+            clicked = true;
+        } else {
+            matric_no.style.display = "none";
+            clicked = false
+        }
+        
+    }
+</script>
